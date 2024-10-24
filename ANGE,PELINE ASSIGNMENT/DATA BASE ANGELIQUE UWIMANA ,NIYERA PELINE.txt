@@ -1,0 +1,1020 @@
+
+mysql> CREATE DATABASE RUHANDE;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> USE RUHANDE;
+Database changed
+mysql> create table ngoma(ID INT(9),F_NAME VARCHAR(9),L_NAME VARCHAR(9),GENDER CHAR(9),PROVINCE CHAR(8),DISTRICT CHAR(9),SECTOR CHAR(9),CELL CHAR(9),TELEPHONE INT(10),EMAIL VARCHAR(31);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> create table ngoma(ID INT(9),F_NAME VARCHAR(9),L_NAME VARCHAR(9),GENDER CHAR(9),PROVINCE CHAR(8),DISTRICT CHAR(9),SECTOR CHAR(9),CELL CHAR(9),TELEPHONE INT(10),EMAIL VARCHAR(31));
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> create table ngoma(ID INT(9),F_NAME VARCHAR(9),L_NAME VARCHAR(9),GENDER CHAR(9),PROVINCE CHAR(8),DISTRICT CHAR(9),SECTOR CHAR(9),CELL CHAR(9),TELEPHONE INT(10),EMAIL VARCHAR(31));
+ERROR 1050 (42S01): Table 'ngoma' already exists
+mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,angeuwimana723gmail.com;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,angeuwimana723gmail.com);
+ERROR 1054 (42S22): Unknown column 'angeuwimana723gmail.com' in 'field list'
+mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,angeuwimana723gmailcom);
+ERROR 1054 (42S22): Unknown column 'angeuwimana723gmailcom' in 'field list'
+mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,'angeuwimana723@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into values(1245678,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com);
+    '>
+    '>
+    '> insert into values(1245678,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(1245678,'niyera','peline','female','east','kayonza','mukarange','kayonza'' at line 1
+mysql> insert into values(12456789,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(12456789,'niyera','peline','female','east','kayonza','mukarange','kayonza' at line 1
+mysql> insert into values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonz' at line 1
+mysql> insert into values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonza',0780828673,'niyerapeline@gmail.com')
+    ->
+    ->
+    -> insert into values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonza',0780828673,'niyerapeline@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonz' at line 1
+mysql> insert into values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza','muhoko',0789642212,'niyerapeline23@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabe' at line 1
+mysql> insert into values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza',0789642212,'niyerapeline23@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabe' at line 1
+mysql> insert into values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza',0789642212,niyerapeline23@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabe' at line 1
+mysql> insert into ngoma values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza',0789642212,'niyerapeline23@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values(123465789,'uwugiriwabo','evelyne','south','muhanga','nyababuye','gitima',0783048700,'uwugiriwaboevely45@gmail.com');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into ngoma values(123465789,'uwugiriwabo','evelyne','female','south','muhanga','nyababuye','gitima',0783048700,'uwugiriwaboevely45@gmail.com');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select*from ngoma;
++-----------+-----------+---------+--------+----------+-----------+-----------+--------+-----------+------------------------------+
+| ID        | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL   | TELEPHONE | EMAIL                        |
++-----------+-----------+---------+--------+----------+-----------+-----------+--------+-----------+------------------------------+
+| 123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO | 798421239 | angeuwimana723@gmail.com     |
+| 124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza | 789642212 | niyerapeline23@gmail.com     |
+| 123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima | 783048700 | uwugiriwaboevely45@gmail.com |
++-----------+-----------+---------+--------+----------+-----------+-----------+--------+-----------+------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into ngoma values(134568901,'nuwayo','pauline','east','kayonza','mukarange','kayonza',0780808073,'nuwayopauline45@gmail.com');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into ngoma values(134568901,'nuwayo','pauline','female','east','kayonza','mukarange','kayonza',0780808073,'nuwayopauline45@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values(1425525647,'nigena','berk','male','kigali','kicukiro','kimihurura','kacyiru',07954632385,'niyigenaberk34@gmail.com');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma values(1357389827,'gisubizo','theo','male','north','gakenye','nemba','shyushya',0798564322,'theogisybizo@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select *from ngoma;
++------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | TELEPHONE  | EMAIL                        |
++------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO   |  798421239 | angeuwimana723@gmail.com     |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza   |  789642212 | niyerapeline23@gmail.com     |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima   |  783048700 | uwugiriwaboevely45@gmail.com |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza  |  780808073 | nuwayopauline45@gmail.com    |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru  | 2147483647 | niyigenaberk34@gmail.com     |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya |  798564322 | theogisybizo@gmail.com       |
++------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into ngoma values(133456475,'mutoni','nadia','female','west','gisenyi','kamuhanda','muhondo',0798432345,'mutoninadia@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+    '> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeu' at line 2
+mysql> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+    '> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeu' at line 2
+mysql> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into ngoma values(32567890,'kubwayo','jamali','male','north','rurindo','rukozo','rukozo',0789456327,'kubwajamali23@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select *from ngoma;
++------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | TELEPHONE  | EMAIL                        |
++------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO   |  798421239 | angeuwimana723@gmail.com     |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza   |  789642212 | niyerapeline23@gmail.com     |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima   |  783048700 | uwugiriwaboevely45@gmail.com |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza  |  780808073 | nuwayopauline45@gmail.com    |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru  | 2147483647 | niyigenaberk34@gmail.com     |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya |  798564322 | theogisybizo@gmail.com       |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo  |  798432345 | mutoninadia@gmail.com        |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe |  782351469 | angeumwali@gmail.com         |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo   |  789456327 | kubwajamali23@gmail.com      |
++------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+9 rows in set (0.00 sec)
+
+mysql> insert into ngoma values( 123458763,'ishimwe','valens','male','east'','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com)' at line 1
+mysql> insert into ngoma values( 123458763,'ishimwe','valens','male','east'','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+    '> insert into ngoma values( 123458763,'ishimwe','valens','male','east'','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+insert in' at line 1
+mysql> insert into ngoma values( 123458763,'ishimwe','valens','male','east','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select* from ngoma;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add column age int(8);
+Query OK, 10 rows affected, 1 warning (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> select* from ngoma;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     | NULL |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     | NULL |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com | NULL |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=34 where ID=123456789;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     | NULL |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com | NULL |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=33 where ID=124567896;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com | NULL |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=44 where ID=123465789;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=83 where ID=134568901;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=74 where ID=1425525647;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   74 |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=44 where ID=1357389827;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   74 |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   44 |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=64 where ID=133456475;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   74 |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   44 |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   64 |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=46 where 134356457;
+Query OK, 10 rows affected (0.00 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   46 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   46 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   46 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   46 |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   46 |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   46 |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   46 |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |   46 |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |   46 |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |   46 |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=64 where ID=133456475;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   46 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   46 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   46 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   46 |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   46 |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   46 |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   64 |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |   46 |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |   46 |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |   46 |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=44 where ID=1357389827;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   46 |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   46 |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   46 |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   46 |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   46 |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   44 |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   64 |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |   46 |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |   46 |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |   46 |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE STUDENT DROP=AGE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=AGE' at line 1
+mysql> ALTER TABLE STUDENT DROP COLUMN AGE;
+ERROR 1146 (42S02): Table 'ruhande.student' doesn't exist
+mysql> ALTER TABLE NGOMA DROP COLUMN AGE;
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT*FROM ID,F_NAME,L_NAME,GENDER;
+ERROR 1146 (42S02): Table 'ruhande.id' doesn't exist
+mysql> SELECT* ID,F_NAME,L_NAME,GENDER FROM NGOMA;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ID,F_NAME,L_NAME,GENDER FROM NGOMA' at line 1
+mysql> SELECT ID,F_NAME,L_NAME,GENDER FROM NGOMA;
++------------+-----------+---------+--------+
+| ID         | F_NAME    | L_NAME  | GENDER |
++------------+-----------+---------+--------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE |
+|  124567896 | niyera    | peline  | female |
+|  123465789 | uwugiriwa | evelyne | female |
+|  134568901 | nuwayo    | pauline | female |
+| 1425525647 | nigena    | berk    | male   |
+| 1357389827 | gisubizo  | theo    | male   |
+|  133456475 | mutoni    | nadia   | female |
+|  134356457 | umwali    | ange    | female |
+|   32567890 | kubwayo   | jamali  | male   |
+|  123458763 | ishimwe   | valens  | male   |
++------------+-----------+---------+--------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT* FROM NGOMA F_NAME='UWIMANA' AND GENDER='FEMALE';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='UWIMANA' AND GENDER='FEMALE'' at line 1
+mysql> SELECT* FROM WHERE PROVINCE='SOUTH' AND GENDER='FEMALE';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE PROVINCE='SOUTH' AND GENDER='FEMALE'' at line 1
+mysql> SELECT* FROM NGOMA WHERE PROVVINCE='SOUTH' AND GENDER='FEMALE';
+ERROR 1054 (42S22): Unknown column 'PROVVINCE' in 'where clause'
+mysql> SELECT* FROM NGOMA WHERE PROVINCE='SOUTH' AND GENDER='FEMALE';
++-----------+-----------+---------+--------+----------+----------+-----------+----------+-----------+------------------------------+
+| ID        | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR    | CELL     | TELEPHONE | EMAIL                        |
++-----------+-----------+---------+--------+----------+----------+-----------+----------+-----------+------------------------------+
+| 123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA  | NYAMABUYE | GAHOGO   | 798421239 | angeuwimana723@gmail.com     |
+| 123465789 | uwugiriwa | evelyne | female | south    | muhanga  | nyababuye | gitima   | 783048700 | uwugiriwaboevely45@gmail.com |
+| 134356457 | umwali    | ange    | female | south    | kamonyi  | muyumba   | gihundwe | 782351469 | angeumwali@gmail.com         |
++-----------+-----------+---------+--------+----------+----------+-----------+----------+-----------+------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT* FROM NGOMA WHERE DISTRICT='MUHANGA' OR ID=123456789;
++-----------+-----------+---------+--------+----------+----------+-----------+--------+-----------+------------------------------+
+| ID        | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR    | CELL   | TELEPHONE | EMAIL                        |
++-----------+-----------+---------+--------+----------+----------+-----------+--------+-----------+------------------------------+
+| 123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA  | NYAMABUYE | GAHOGO | 798421239 | angeuwimana723@gmail.com     |
+| 123465789 | uwugiriwa | evelyne | female | south    | muhanga  | nyababuye | gitima | 783048700 | uwugiriwaboevely45@gmail.com |
++-----------+-----------+---------+--------+----------+----------+-----------+--------+-----------+------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+| ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+|  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |
+|  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |
+|  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |
+|  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |
+| 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |
+| 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |
+|  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |
+|  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |
+|   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |
+|  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |
++------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+10 rows in set (0.00 sec)
+
+mysql>
+mysql> mysql> CREATE DATABASE RUHANDE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysql> CREATE DATABASE RUHANDE' at line 1
+mysql> Query OK, 1 row affected (0.02 sec)
+    ->
+    -> mysql> USE RUHANDE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.02 sec)
+
+mysql> USE RUHANDE' at line 1
+mysql> Database changed
+    -> mysql> create table ngoma(ID INT(9),F_NAME VARCHAR(9),L_NAME VARCHAR(9),GENDER CHAR(9),PROVINCE CHAR(8),DISTRICT CHAR(9),SECTOR CHAR(9),CELL CHAR(9),TELEPHONE INT(10),EMAIL VARCHAR(31);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Database changed
+mysql> create table ngoma(ID INT(9),F_NAME VARCHAR(9),L_NAME VA' at line 1
+mysql> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    -> mysql> create table ngoma(ID INT(9),F_NAME VARCHAR(9),L_NAME VARCHAR(9),GENDER CHAR(9),PROVINCE CHAR(8),DISTRICT CHAR(9),SECTOR CHAR(9),CELL CHAR(9),TELEPHONE INT(10),EMAIL VARCHAR(31));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'the manual that corresponds to your MySQL server version for the right syntax to' at line 1
+mysql> Query OK, 0 rows affected, 2 warnings (0.03 sec)
+    ->
+    -> mysql> create table ngoma(ID INT(9),F_NAME VARCHAR(9),L_NAME VARCHAR(9),GENDER CHAR(9),PROVINCE CHAR(8),DISTRICT CHAR(9),SECTOR CHAR(9),CELL CHAR(9),TELEPHONE INT(10),EMAIL VARCHAR(31));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> create table ngoma(ID I' at line 1
+mysql> ERROR 1050 (42S01): Table 'ngoma' already exists
+    -> mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,angeuwimana723gmail.com;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1050 (42S01): Table 'ngoma' already exists
+mysql> INSERT INTO NGOMA VALUES' at line 1
+mysql> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    -> mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,angeuwimana723gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'the manual that corresponds to your MySQL server version for the right syntax to' at line 1
+mysql> ERROR 1054 (42S22): Unknown column 'angeuwimana723gmail.com' in 'field list'
+    -> mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,angeuwimana723gmailcom);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1054 (42S22): Unknown column 'angeuwimana723gmail.com' in 'field list'
+mys' at line 1
+mysql> ERROR 1054 (42S22): Unknown column 'angeuwimana723gmailcom' in 'field list'
+    -> mysql> INSERT INTO NGOMA VALUES(123456789,'UWIMANA','ANGE','FEMALE','SOUTH','MUHANGA','NYAMABUYE','GAHOGO',0798421239,'angeuwimana723@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1054 (42S22): Unknown column 'angeuwimana723gmailcom' in 'field list'
+mysq' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    ->
+    -> mysql> insert into values(1245678,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com);
+    '>     '>
+    ->     '>
+    '>     '> insert into values(1245678,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com);
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(1245678,'niyera','peline','female','east','kayonza','mukarange','kayonza'' at line 1
+    '> mysql> insert into values(12456789,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com');
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(12456789,'niyera','peline','female','east','kayonza','mukarange','kayonza' at line 1
+    -> mysql> insert into values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonza','kayonza',0780828673,'niyerapeline@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into values(1245678,'niyera',' at line 1
+mysql> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonz' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    '> mysql> insert into values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonza',0780828673,'niyerapeline@gmail.com')
+    '>     ->
+    '>     ->
+    '>     -> insert into values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonza',0780828673,'niyerapeline@gmail.com');
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','kayonza','mukarange','kayonz' at line 1
+    -> mysql> insert into values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza','muhoko',0789642212,'niyerapeline23@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'the manual that corresponds to your MySQL server version for the right syntax to' at line 1
+mysql> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabe' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    '> mysql> insert into values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza',0789642212,'niyerapeline23@gmail.com');
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabe' at line 1
+    -> mysql> insert into values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza',0789642212,niyerapeline23@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'the manual that corresponds to your MySQL server version for the right syntax to' at line 1
+mysql> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabe' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    '> mysql> insert into ngoma values(124567896,'niyera','peline','female','east','rwamagana','rwabicuma','kabeza',0789642212,'niyerapeline23@gmail.com');
+    '> Query OK, 1 row affected (0.00 sec)
+    '>
+    '> mysql> insert into ngoma values(123465789,'uwugiriwabo','evelyne','south','muhanga','nyababuye','gitima',0783048700,'uwugiriwaboevely45@gmail.com');
+    '> ERROR 1136 (21S01): Column count doesn't match value count at row 1
+    -> mysql> insert into ngoma values(123465789,'uwugiriwabo','evelyne','female','south','muhanga','nyababuye','gitima',0783048700,'uwugiriwaboevely45@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'the manual that corresponds to your MySQL server version for the right syntax to' at line 1
+mysql> Query OK, 1 row affected, 1 warning (0.00 sec)
+    ->
+    -> mysql> select*from ngoma;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select*from ngoma' at line 1
+mysql> +-----------+-----------+---------+--------+----------+-----------+-----------+--------+-----------+------------------------------+
+    -> | ID        | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL   | TELEPHONE | EMAIL                        |
+    -> +-----------+-----------+---------+--------+----------+-----------+-----------+--------+-----------+------------------------------+
+    -> | 123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO | 798421239 | angeuwimana723@gmail.com     |
+    -> | 124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza | 789642212 | niyerapeline23@gmail.com     |
+    -> | 123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima | 783048700 | uwugiriwaboevely45@gmail.com |
+    -> +-----------+-----------+---------+--------+----------+-----------+-----------+--------+-----------+------------------------------+
+    -> 3 rows in set (0.00 sec)
+    ->
+    -> mysql> insert into ngoma values(134568901,'nuwayo','pauline','east','kayonza','mukarange','kayonza',0780808073,'nuwayopauline45@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+-----------+-----------+---------+--------+----------+-----------+-----------+-' at line 1
+mysql> ERROR 1136 (21S01): Column count doesn't match value count at row 1
+    '> mysql> insert into ngoma values(134568901,'nuwayo','pauline','female','east','kayonza','mukarange','kayonza',0780808073,'nuwayopauline45@gmail.com');
+    '> Query OK, 1 row affected (0.00 sec)
+    '>
+    '> mysql> insert into ngoma values(1425525647,'nigena','berk','male','kigali','kicukiro','kimihurura','kacyiru',07954632385,'niyigenaberk34@gmail.com');
+    '> Query OK, 1 row affected, 2 warnings (0.00 sec)
+    '>
+    '> mysql> insert into ngoma values(1357389827,'gisubizo','theo','male','north','gakenye','nemba','shyushya',0798564322,'theogisybizo@gmail.com');
+    '> Query OK, 1 row affected (0.00 sec)
+    '>
+    '> mysql> select *from ngoma;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | TELEPHONE  | EMAIL                        |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO   |  798421239 | angeuwimana723@gmail.com     |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza   |  789642212 | niyerapeline23@gmail.com     |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima   |  783048700 | uwugiriwaboevely45@gmail.com |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza  |  780808073 | nuwayopauline45@gmail.com    |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru  | 2147483647 | niyigenaberk34@gmail.com     |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya |  798564322 | theogisybizo@gmail.com       |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+    '> 6 rows in set (0.00 sec)
+    '>
+    '> mysql> insert into ngoma values(133456475,'mutoni','nadia','female','west','gisenyi','kamuhanda','muhondo',0798432345,'mutoninadia@gmail.com');
+    '> Query OK, 1 row affected (0.00 sec)
+    '>
+    '> mysql> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> inser' at line 1
+mysql>     '> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi'' at line 1
+mysql> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeu' at line 2
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    -> mysql> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+    '>     '> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com);
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeu' at line 2
+    '> mysql> insert into ngoma values(134356457,'umwali','ange','female','south','kamonyi','muyumba','gihundwe',0782351469,'angeumwali@gmail.com');
+    '> Query OK, 1 row affected (0.01 sec)
+    '>
+    '> mysql> insert into ngoma values(32567890,'kubwayo','jamali','male','north','rurindo','rukozo','rukozo',0789456327,'kubwajamali23@gmail.com');
+    '> Query OK, 1 row affected (0.00 sec)
+    '>
+    '> mysql> select *from ngoma;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | TELEPHONE  | EMAIL                        |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO   |  798421239 | angeuwimana723@gmail.com     |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza   |  789642212 | niyerapeline23@gmail.com     |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima   |  783048700 | uwugiriwaboevely45@gmail.com |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza  |  780808073 | nuwayopauline45@gmail.com    |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru  | 2147483647 | niyigenaberk34@gmail.com     |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya |  798564322 | theogisybizo@gmail.com       |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo  |  798432345 | mutoninadia@gmail.com        |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe |  782351469 | angeumwali@gmail.com         |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo   |  789456327 | kubwajamali23@gmail.com      |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+----------+------------+------------------------------+
+    '> 9 rows in set (0.00 sec)
+    '>
+    '> mysql> insert into ngoma values( 123458763,'ishimwe','valens','male','east'','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com);
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com)' at line 1
+    '> mysql> insert into ngoma values( 123458763,'ishimwe','valens','male','east'','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'the manual that corresponds to your MySQL server version for the right syntax to' at line 1
+mysql>     '> insert into ngoma values( 123458763,'ishimwe','valens','male','east'','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''> insert into ngoma values( 123458763,'ishimwe','valens','male','east'','nyagat' at line 1
+mysql> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'the manual that corresponds to your MySQL server version for the right syntax to' at line 1
+mysql> insert in' at line 1
+    '> mysql> insert into ngoma values( 123458763,'ishimwe','valens','male','east','nyagatare','matimba','kagitumba',0782345678,'valensish456@gmail.com');
+    '> Query OK, 1 row affected (0.00 sec)
+    '>
+    '> mysql> select* from ngoma;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> alter table ngoma add column age int(8);
+    '> Query OK, 10 rows affected, 1 warning (0.05 sec)
+    '> Records: 10  Duplicates: 0  Warnings: 1
+    '>
+    '> mysql> select* from ngoma;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     | NULL |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     | NULL |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com | NULL |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=34 where ID=123456789;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     | NULL |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com | NULL |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=33 where ID=124567896;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com | NULL |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=44 where ID=123465789;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    | NULL |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=83 where ID=134568901;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     | NULL |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=74 where ID=1425525647;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   74 |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       | NULL |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=44 where ID=1357389827;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   74 |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   44 |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        | NULL |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=64 where ID=133456475;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   34 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   33 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   44 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   83 |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   74 |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   44 |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   64 |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         | NULL |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      | NULL |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       | NULL |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=46 where 134356457;
+    '> Query OK, 10 rows affected (0.00 sec)
+    '> Rows matched: 10  Changed: 10  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   46 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   46 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   46 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   46 |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   46 |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   46 |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   46 |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |   46 |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |   46 |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |   46 |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=64 where ID=133456475;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   46 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   46 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   46 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   46 |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   46 |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   46 |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   64 |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |   46 |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |   46 |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |   46 |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> update ngoma set age=44 where ID=1357389827;
+    '> Query OK, 1 row affected (0.00 sec)
+    '> Rows matched: 1  Changed: 1  Warnings: 0
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        | age  |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |   46 |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |   46 |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |   46 |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |   46 |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |   46 |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |   44 |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |   64 |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |   46 |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |   46 |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |   46 |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> ALTER TABLE STUDENT DROP=AGE;
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=AGE' at line 1
+    '> mysql> ALTER TABLE STUDENT DROP COLUMN AGE;
+    '> ERROR 1146 (42S02): Table 'ruhande.student' doesn't exist
+    -> mysql> ALTER TABLE NGOMA DROP COLUMN AGE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in' at line 1
+mysql> insert into ngoma values( 123458763,'ishimwe','valens','mal' at line 1
+mysql> Query OK, 10 rows affected (0.04 sec)
+    -> Records: 10  Duplicates: 0  Warnings: 0
+    ->
+    -> mysql> SELECT* FROM NGOMA;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+m' at line 1
+mysql> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    -> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        |
+    -> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    -> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |
+    -> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |
+    -> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |
+    -> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |
+    -> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |
+    -> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |
+    -> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |
+    -> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |
+    -> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |
+    -> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |
+    -> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    -> 10 rows in set (0.00 sec)
+    ->
+    -> mysql> SELECT*FROM ID,F_NAME,L_NAME,GENDER;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+------------+-----------+---------+--------+----------+-----------+-----------+' at line 1
+mysql> ERROR 1146 (42S02): Table 'ruhande.id' doesn't exist
+    '> mysql> SELECT* ID,F_NAME,L_NAME,GENDER FROM NGOMA;
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ID,F_NAME,L_NAME,GENDER FROM NGOMA' at line 1
+    '> mysql> SELECT ID,F_NAME,L_NAME,GENDER FROM NGOMA;
+    '> +------------+-----------+---------+--------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER |
+    '> +------------+-----------+---------+--------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE |
+    '> |  124567896 | niyera    | peline  | female |
+    '> |  123465789 | uwugiriwa | evelyne | female |
+    '> |  134568901 | nuwayo    | pauline | female |
+    '> | 1425525647 | nigena    | berk    | male   |
+    '> | 1357389827 | gisubizo  | theo    | male   |
+    '> |  133456475 | mutoni    | nadia   | female |
+    '> |  134356457 | umwali    | ange    | female |
+    '> |   32567890 | kubwayo   | jamali  | male   |
+    '> |  123458763 | ishimwe   | valens  | male   |
+    '> +------------+-----------+---------+--------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql> SELECT* FROM NGOMA F_NAME='UWIMANA' AND GENDER='FEMALE';
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='UWIMANA' AND GENDER='FEMALE'' at line 1
+    '> mysql> SELECT* FROM WHERE PROVINCE='SOUTH' AND GENDER='FEMALE';
+    '> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE PROVINCE='SOUTH' AND GENDER='FEMALE'' at line 1
+    '> mysql> SELECT* FROM NGOMA WHERE PROVVINCE='SOUTH' AND GENDER='FEMALE';
+    '> ERROR 1054 (42S22): Unknown column 'PROVVINCE' in 'where clause'
+    '> mysql> SELECT* FROM NGOMA WHERE PROVINCE='SOUTH' AND GENDER='FEMALE';
+    '> +-----------+-----------+---------+--------+----------+----------+-----------+----------+-----------+------------------------------+
+    '> | ID        | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR    | CELL     | TELEPHONE | EMAIL                        |
+    '> +-----------+-----------+---------+--------+----------+----------+-----------+----------+-----------+------------------------------+
+    '> | 123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA  | NYAMABUYE | GAHOGO   | 798421239 | angeuwimana723@gmail.com     |
+    '> | 123465789 | uwugiriwa | evelyne | female | south    | muhanga  | nyababuye | gitima   | 783048700 | uwugiriwaboevely45@gmail.com |
+    '> | 134356457 | umwali    | ange    | female | south    | kamonyi  | muyumba   | gihundwe | 782351469 | angeumwali@gmail.com         |
+    '> +-----------+-----------+---------+--------+----------+----------+-----------+----------+-----------+------------------------------+
+    '> 3 rows in set (0.00 sec)
+    '>
+    '> mysql> SELECT* FROM NGOMA WHERE DISTRICT='MUHANGA' OR ID=123456789;
+    '> +-----------+-----------+---------+--------+----------+----------+-----------+--------+-----------+------------------------------+
+    '> | ID        | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR    | CELL   | TELEPHONE | EMAIL                        |
+    '> +-----------+-----------+---------+--------+----------+----------+-----------+--------+-----------+------------------------------+
+    '> | 123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA  | NYAMABUYE | GAHOGO | 798421239 | angeuwimana723@gmail.com     |
+    '> | 123465789 | uwugiriwa | evelyne | female | south    | muhanga  | nyababuye | gitima | 783048700 | uwugiriwaboevely45@gmail.com |
+    '> +-----------+-----------+---------+--------+----------+----------+-----------+--------+-----------+------------------------------+
+    '> 2 rows in set (0.00 sec)
+    '>
+    '> mysql> SELECT* FROM NGOMA;
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    '> | ID         | F_NAME    | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL      | TELEPHONE  | EMAIL                        |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    '> |  123456789 | UWIMANA   | ANGE    | FEMALE | SOUTH    | MUHANGA   | NYAMABUYE | GAHOGO    |  798421239 | angeuwimana723@gmail.com     |
+    '> |  124567896 | niyera    | peline  | female | east     | rwamagana | rwabicuma | kabeza    |  789642212 | niyerapeline23@gmail.com     |
+    '> |  123465789 | uwugiriwa | evelyne | female | south    | muhanga   | nyababuye | gitima    |  783048700 | uwugiriwaboevely45@gmail.com |
+    '> |  134568901 | nuwayo    | pauline | female | east     | kayonza   | mukarange | kayonza   |  780808073 | nuwayopauline45@gmail.com    |
+    '> | 1425525647 | nigena    | berk    | male   | kigali   | kicukiro  | kimihurur | kacyiru   | 2147483647 | niyigenaberk34@gmail.com     |
+    '> | 1357389827 | gisubizo  | theo    | male   | north    | gakenye   | nemba     | shyushya  |  798564322 | theogisybizo@gmail.com       |
+    '> |  133456475 | mutoni    | nadia   | female | west     | gisenyi   | kamuhanda | muhondo   |  798432345 | mutoninadia@gmail.com        |
+    '> |  134356457 | umwali    | ange    | female | south    | kamonyi   | muyumba   | gihundwe  |  782351469 | angeumwali@gmail.com         |
+    '> |   32567890 | kubwayo   | jamali  | male   | north    | rurindo   | rukozo    | rukozo    |  789456327 | kubwajamali23@gmail.com      |
+    '> |  123458763 | ishimwe   | valens  | male   | east     | nyagatare | matimba   | kagitumba |  782345678 | valensish456@gmail.com       |
+    '> +------------+-----------+---------+--------+----------+-----------+-----------+-----------+------------+------------------------------+
+    '> 10 rows in set (0.00 sec)
+    '>
+    '> mysql>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '> ^S
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
